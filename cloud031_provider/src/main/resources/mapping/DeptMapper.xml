@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qf.cloud031_provider.mapper.DeptMapper" >
+    <resultMap id="deptMap" type="com.qf.cloud031.pojo.Dept">
+        <id property="deptno" column="deptno"></id>
+        <result property="dname" column="dname"></result>
+        <result property="loc" column="loc"></result>
+    </resultMap>
+    <select id="findAll" resultMap="deptMap">
+        select * from dept
+    </select>
+   <!-- <select id="findOne" resultMap="deptMap">
+        select * from dept where deptno=#{deptno}
+    </select>
+    <insert id="saveDept">
+        insert into dept(deptno,dname,loc) values (deptno=#{deptno},dname=#{dname},loc=#{loc})
+    </insert>
+    <update id="updateDept">
+        update dept set deptno=#{deptno},dname=#{dname},loc=#{loc} where deptno=#{deptno}
+    </update>
+    <delete id="deleteDept">
+        delete from dept where deptno=#{deptno}
+    </delete>-->
+</mapper>
